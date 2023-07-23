@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7ed5dce87d.js" crossorigin="anonymous"></script>
+    <title>Marvel Lib</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://www.marvel.com/" target="_blank"><img src="images/marvel-logo.png" alt="favicon-marvel"></a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="background">
+            <h2 id="text-welcome">Welcome to the Marvel Library !</h2>
+        </div>
+        <section class="sectionPopular">
+            <h3>Marvel's Most Beloved Characters:</h3>
+            <div id="popularHeroes"></div>
+        </section>
+        <hr>
+        <h3>Search here for a MCU Character:</h3>
+        <form class="search">
+            <input type="text" name="heroInput" id="heroInput" required>
+            <button type="submit" id="btnSubmit">Search</button>
+        </form>
+        <section id="allCharacters"></section>
+    </main>
+    <div class="modal-container" id="modal-container" onclick="removeModal()">
+        <div class="modal">
+            <button id="modal-btn" class="modal-btn" onclick="removeModal()">X</button>
+            <h3 id="nameModal"></h3>
+            <img id="imgModal" src="" alt="Image Hero">
+            <p class="description-container"><strong>Description:</strong>  <span id="descriptionModal"></span></p>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

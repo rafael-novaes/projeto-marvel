@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 98vw;
+    padding-top: 65px;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+header {
+    height: 65px;
+    background-color: #111113;
+    padding: 0 15px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 4000;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a img {
+    width: 100px;
+    height: 80px;
+}
+
+.main div #text-welcome {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.644);
+}
+
+.background {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    width: 100%;
+    height:  38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid black;
+}
+
+.main h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 35px auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#popularHeroes, #allCharacters {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0px;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    justify-content: center;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto;
+    margin-top: 30px;
+    padding: 3px;
+    background-color: #111113;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card > img {
+    width: 100%;
+    height: 250px;
+    border-bottom: 4px solid #000000;
+    border-radius: 5px;
+}
+
+.card > p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #111113;
+    color: #ffffff;
+}
+
+.search {
+    margin: auto;
+    text-align: center;
+}
+
+#btnSubmit {
+    border: 1px solid rgba(54, 3, 3, 0.452);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: .9em;
+    font-weight: bold;
+    color: white;
+    background-color: #ff0000;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+#heroInput {
+    height: 25px;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.5);
+    z-index: 4000;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal {
+    border: 3px solid red;
+    padding: 30px;
+    background: #111113;
+    width: 55%;
+    max-width: 300px;
+    color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 4000;
+}
+
+.modal > h3 {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.modal > img {
+    width: 220px;
+    height: 250px;
+    border: 1px solid  rgba(255, 255, 255, 0.753);
+    margin: 10px 0;
+}
+
+.modal-btn {
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #111113;
+    color: white;
+    border: 3px solid red;
+    font-weight: bolder;
+    font-size: 16px
+}
+
+.hoverCard.hover {
+    display: flex;
+    transition: .5s;
+    opacity: 1;
+}
+
+.hoverCard {
+    justify-self: center;
+    position: absolute;
+    background-color: rgba(23, 24, 24, 0.6);
+    width: 250px;
+    height: 254px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.hoverCard > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+@media (min-width: 900px) {
+
+    .background {
+        height: 40vh;
+        background-size: contain;
+    }
+
+    .main div #text-welcome {
+        font-size: 2.5em;
+    }
+
+    .modal {
+        width: 35%;
+        height: 75%;
+        font-size: 18px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .modal img {
+        width: 280px;
+        height: 290px;
+        margin: 15px;
+    }
+}
+
+
+
+
+
+
