@@ -93,6 +93,7 @@ const fetchHeroWanted = async (persona) => {
                     description = "Sorry, we don't have a description for this character yet."
                 }
                 createCard(srcImage, name, allCharactersArea, description)
+                events()
             })
         })
     })
@@ -132,7 +133,7 @@ function events(){
                 showModal()
             })
         })       
-    }, 1500)
+    }, 1000)
 }
 
 

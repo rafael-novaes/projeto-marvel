@@ -6,7 +6,6 @@
 }
 
 body {
-    width: 98vw;
     padding-top: 65px;
     overflow-x: hidden;
     background-color: whitesmoke;
@@ -155,9 +154,9 @@ header {
 
 .modal {
     border: 3px solid red;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     background: #111113;
-    width: 55%;
+    width: 56%;
     max-width: 300px;
     color: white;
     display: flex;
@@ -179,6 +178,12 @@ header {
     border: 1px solid  rgba(255, 255, 255, 0.753);
     margin: 10px 0;
 }
+
+.modal > .description-container {
+    font-size: .9rem;
+    text-align: justify;
+}
+
 
 .modal-btn {
     text-align: center;
@@ -234,17 +239,49 @@ header {
     }
 
     .modal {
-        width: 35%;
-        height: 75%;
+        min-width: 20%;
+        min-height: 55%;
+        max-height: 78%;
         font-size: 18px;
         text-align: center;
         justify-content: center;
     }
 
     .modal img {
-        width: 280px;
-        height: 290px;
+        width: 260px;
+        height: 270px;
         margin: 15px;
+    }
+
+    .modal > .description-container {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal {
+        max-height: 65%;
+    }
+
+    .modal img {
+        height: 220px;
+    }
+    .description-container{
+        height: 120px;
+        overflow-y: auto;
+    }
+
+    .description-container > span {
+        width: 95%;
+        display: inline-block;
+    }
+
+    .description-container::-webkit-scrollbar-thumb{
+        background-color: rgba(255, 0, 0, 0.384);      
+        border-radius: 20%;  
+    }
+    .description-container::-webkit-scrollbar {
+        width: 4px;
     }
 }
 
